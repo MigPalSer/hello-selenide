@@ -20,6 +20,6 @@ Feature: Robobar age checks
       Then robobar confirms order
       Examples:
         | age |
-        | 18  |
+        | 180  |
         | 19  |
         | 20  |
