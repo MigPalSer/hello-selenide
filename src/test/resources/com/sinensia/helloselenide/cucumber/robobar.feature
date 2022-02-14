@@ -69,8 +69,8 @@ Feature: Robobar cart
     When user adds <cola> cola <beer> beer <wine> wine
     Then total should be €<total>
     And user checks out
-    And user is <age> years old
-    But checkout result is "<expected>"
+    And user is <age> years old and buy <beer> beers and <wine> wines
+    Then checkout result is "<expected>"
     Examples:
       | cola | beer | wine | total | age | expected |
       | 1    | 0    | 0    | 1.25  | 17  | pass     |

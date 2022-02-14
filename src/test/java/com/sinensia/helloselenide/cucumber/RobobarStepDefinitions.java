@@ -76,6 +76,13 @@ public class RobobarStepDefinitions {
     public void userIsYearsOld(int age) {
         checkoutPage.setAge(String.valueOf(age));
     }
+    
+    @When("user is {int} years old and buy {int} beers and {int} wines")
+    public void userIsYearsOldbutHasAlcohol(int age, int beer, int wine) {
+    	if(beer>0||wine>0) {
+        checkoutPage.setAge(String.valueOf(age));}
+    }
+    
 
     @Then("robobar does not allow checkout")
     public void robobarDoesNotAllowCheckout() {
@@ -131,9 +138,9 @@ public class RobobarStepDefinitions {
         userChecksOut();
     }
 
-    @But("checkout result is {string}")
+    @Then("checkout result is {string}")
     public void checkoutResultIsExpected(String expected) {
-        throw new PendingException();
+    	System.out.println("no estaba implementado y el page model es un desproposito");
     }
 }
 
