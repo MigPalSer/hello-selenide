@@ -28,10 +28,10 @@ pipeline {
             }
         }
 
- stage('gradle assemble') {
+ stage('gradle build') {
             steps {
             
-            	sh "./gradlew build"
+            	sh "./gradlew jar"
 		
             }
         }
